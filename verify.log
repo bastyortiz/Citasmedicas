@@ -1,0 +1,120 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.duoc:citasmedicas >------------------------
+[INFO] Building citasmedicas 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.3.5:run (default-cli) > test-compile @ citasmedicas >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ citasmedicas ---
+[INFO] Copying 3 resources from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ citasmedicas ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ citasmedicas ---
+[INFO] Copying 1 resource from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ citasmedicas ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.3.5:run (default-cli) < test-compile @ citasmedicas <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.3.5:run (default-cli) @ citasmedicas ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2026-05-09T00:18:42.769-04:00  INFO 48024 --- [citasmedicas] [           main] c.d.c.CitasmedicasApplication            : Starting CitasmedicasApplication using Java 25.0.2 with PID 48024 (C:\Users\bastian\Downloads\duoc uc\Full Stack I\semana 3\Citas medicas\citasmedicas\target\classes started by bastian in C:\Users\bastian\Downloads\duoc uc\Full Stack I\semana 3\Citas medicas\citasmedicas)
+2026-05-09T00:18:42.772-04:00  INFO 48024 --- [citasmedicas] [           main] c.d.c.CitasmedicasApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-05-09T00:18:43.125-04:00  INFO 48024 --- [citasmedicas] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-09T00:18:43.154-04:00  INFO 48024 --- [citasmedicas] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interface.
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (file:/C:/Users/bastian/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.31/tomcat-embed-core-10.1.31.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+2026-05-09T00:18:43.484-04:00  INFO 48024 --- [citasmedicas] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-05-09T00:18:43.493-04:00  INFO 48024 --- [citasmedicas] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-09T00:18:43.493-04:00  INFO 48024 --- [citasmedicas] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-05-09T00:18:43.536-04:00  INFO 48024 --- [citasmedicas] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-09T00:18:43.536-04:00  INFO 48024 --- [citasmedicas] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 737 ms
+2026-05-09T00:18:43.613-04:00  INFO 48024 --- [citasmedicas] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-09T00:18:43.642-04:00  INFO 48024 --- [citasmedicas] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-05-09T00:18:43.662-04:00  INFO 48024 --- [citasmedicas] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-05-09T00:18:43.837-04:00  INFO 48024 --- [citasmedicas] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-09T00:18:43.853-04:00  INFO 48024 --- [citasmedicas] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-09T00:18:44.028-04:00  INFO 48024 --- [citasmedicas] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:citasmedicas user=SA
+2026-05-09T00:18:44.029-04:00  INFO 48024 --- [citasmedicas] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-09T00:18:44.044-04:00  WARN 48024 --- [citasmedicas] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-09T00:18:44.533-04:00  INFO 48024 --- [citasmedicas] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists citas_medicas cascade 
+Hibernate: 
+    create table citas_medicas (
+        fecha_cita date not null,
+        hora_cita varchar(5) not null,
+        id bigint generated by default as identity,
+        rut_paciente varchar(20) not null,
+        estado varchar(30) not null,
+        especialidad varchar(100) not null,
+        nombre_medico varchar(100) not null,
+        nombre_paciente varchar(100) not null,
+        motivo_consulta varchar(255) not null,
+        primary key (id)
+    )
+2026-05-09T00:18:44.554-04:00  INFO 48024 --- [citasmedicas] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-09T00:18:44.948-04:00  INFO 48024 --- [citasmedicas] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2026-05-09T00:18:44.952-04:00  INFO 48024 --- [citasmedicas] [           main] c.d.c.CitasmedicasApplication            : Started CitasmedicasApplication in 2.4 seconds (process running for 2.614)
+2026-05-09T00:18:49.218-04:00  INFO 48024 --- [citasmedicas] [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-09T00:18:49.218-04:00  INFO 48024 --- [citasmedicas] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-09T00:18:49.219-04:00  INFO 48024 --- [citasmedicas] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Hibernate: 
+    select
+        cm1_0.id,
+        cm1_0.especialidad,
+        cm1_0.estado,
+        cm1_0.fecha_cita,
+        cm1_0.hora_cita,
+        cm1_0.motivo_consulta,
+        cm1_0.nombre_medico,
+        cm1_0.nombre_paciente,
+        cm1_0.rut_paciente 
+    from
+        citas_medicas cm1_0
+Hibernate: 
+    select
+        cm1_0.id,
+        cm1_0.especialidad,
+        cm1_0.estado,
+        cm1_0.fecha_cita,
+        cm1_0.hora_cita,
+        cm1_0.motivo_consulta,
+        cm1_0.nombre_medico,
+        cm1_0.nombre_paciente,
+        cm1_0.rut_paciente 
+    from
+        citas_medicas cm1_0
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  17.252 s
+[INFO] Finished at: 2026-05-09T00:18:58-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.3.5:run (default-cli) on project citasmedicas: Process terminated with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
