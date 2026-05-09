@@ -1,0 +1,12 @@
+.git/
+.idea/
+.vscode/
+*.log
+README.md
+src/
+database/
+.mvn/
+mvnw
+mvnw.cmd
+HELP.md
+CHECKLIST.md

@@ -1,44 +1,153 @@
 package com.duoc.citasmedicas.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.FutureOrPresent;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
+
+import java.time.LocalDate;
+
+@Entity
+@Table(name = "citas_medicas")
 public class CitaMedica {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String paciente;
-    private String doctor;
+
+    @NotBlank
+    @Size(max = 100)
+    @Column(name = "nombre_paciente", nullable = false, length = 100)
+    private String nombrePaciente;
+
+    @NotBlank
+    @Size(max = 20)
+    @Column(name = "rut_paciente", nullable = false, length = 20)
+    private String rutPaciente;
+
+    @NotBlank
+    @Size(max = 100)
+    @Column(name = "nombre_medico", nullable = false, length = 100)
+    private String nombreMedico;
+
+    @NotBlank
+    @Size(max = 100)
+    @Column(nullable = false, length = 100)
     private String especialidad;
-    private String fecha;
-    private String hora;
-    private String estadoCita; // Programada, Cancelada, Completada
-    private String sala;
 
-    public CitaMedica() {}
+    @NotNull
+    @FutureOrPresent
+    @Column(name = "fecha_cita", nullable = false)
+    private LocalDate fechaCita;
 
-    public CitaMedica(Long id, String paciente, String doctor, String especialidad, 
-                      String fecha, String hora, String estadoCita, String sala) {
-        this.id = id;
-        this.paciente = paciente;
-        this.doctor = doctor;
-        this.especialidad = especialidad;
-        this.fecha = fecha;
-        this.hora = hora;
-        this.estadoCita = estadoCita;
-        this.sala = sala;
+    @NotBlank
+    @Pattern(regexp = "^([01]\\d|2[0-3]):[0-5]\\d$", message = "La hora debe tener formato HH:mm")
+    @Column(name = "hora_cita", nullable = false, length = 5)
+    private String horaCita;
+
+    @NotBlank
+    @Pattern(regexp = "PROGRAMADA|CANCELADA|REALIZADA|REAGENDADA", message = "Estado invalido")
+    @Column(nullable = false, length = 30)
+    private String estado;
+
+    @NotBlank
+    @Size(max = 255)
+    @Column(name = "motivo_consulta", nullable = false, length = 255)
+    private String motivoConsulta;
+
+    public CitaMedica() {
     }
 
-    // Getters y Setters 
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
-    public String getPaciente() { return paciente; }
-    public void setPaciente(String paciente) { this.paciente = paciente; }
-    public String getDoctor() { return doctor; }
-    public void setDoctor(String doctor) { this.doctor = doctor; }
-    public String getEspecialidad() { return especialidad; }
-    public void setEspecialidad(String especialidad) { this.especialidad = especialidad; }
-    public String getFecha() { return fecha; }
-    public void setFecha(String fecha) { this.fecha = fecha; }
-    public String getHora() { return hora; }
-    public void setHora(String hora) { this.hora = hora; }
-    public String getEstadoCita() { return estadoCita; }
-    public void setEstadoCita(String estadoCita) { this.estadoCita = estadoCita; }
-    public String getSala() { return sala; }
-    public void setSala(String sala) { this.sala = sala; }
+    public CitaMedica(Long id, String nombrePaciente, String rutPaciente, String nombreMedico,
+                      String especialidad, LocalDate fechaCita, String horaCita, String estado,
+                      String motivoConsulta) {
+        this.id = id;
+        this.nombrePaciente = nombrePaciente;
+        this.rutPaciente = rutPaciente;
+        this.nombreMedico = nombreMedico;
+        this.especialidad = especialidad;
+        this.fechaCita = fechaCita;
+        this.horaCita = horaCita;
+        this.estado = estado;
+        this.motivoConsulta = motivoConsulta;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNombrePaciente() {
+        return nombrePaciente;
+    }
+
+    public void setNombrePaciente(String nombrePaciente) {
+        this.nombrePaciente = nombrePaciente;
+    }
+
+    public String getRutPaciente() {
+        return rutPaciente;
+    }
+
+    public void setRutPaciente(String rutPaciente) {
+        this.rutPaciente = rutPaciente;
+    }
+
+    public String getNombreMedico() {
+        return nombreMedico;
+    }
+
+    public void setNombreMedico(String nombreMedico) {
+        this.nombreMedico = nombreMedico;
+    }
+
+    public String getEspecialidad() {
+        return especialidad;
+    }
+
+    public void setEspecialidad(String especialidad) {
+        this.especialidad = especialidad;
+    }
+
+    public LocalDate getFechaCita() {
+        return fechaCita;
+    }
+
+    public void setFechaCita(LocalDate fechaCita) {
+        this.fechaCita = fechaCita;
+    }
+
+    public String getHoraCita() {
+        return horaCita;
+    }
+
+    public void setHoraCita(String horaCita) {
+        this.horaCita = horaCita;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getMotivoConsulta() {
+        return motivoConsulta;
+    }
+
+    public void setMotivoConsulta(String motivoConsulta) {
+        this.motivoConsulta = motivoConsulta;
+    }
 }
